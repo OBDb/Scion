@@ -199,7 +199,7 @@
   "signals": [
     {"id": "SCION_TPMS_POS_FL", "path": "Tires", "fmt": {"bix": 32,  "len": 8,  "max": 255,                                                                         "unit": "scalar"  },               "name": "Front left tire sensor position", "description": "0 front left, 1 front right, 2 rear left, 3 rear right"},
     {"id": "SCION_TP_FL_V5",    "path": "Tires", "fmt": {"bix": 40,  "len": 16, "blsb": true, "max": 32.76, "min": -32.76, "div": 1000,               "sign": true,                   "unit": "bars"   },                                         "name": "Front left tire pressure",                                      "suggestedMetric": "frontLeftTirePressure"},
-    {"id": "SCION_TT_FL_V3",    "path": "Tires", "fmt": {"bix": 56,  "len": 8,  "max": 127,   "min": -128,                              "sign": true,               "unit": "celsius" },               "name": "Front left tire temperature",     "suggestedMetric": "frontLeftTireTemperature"},
+    {"id": "SCION_TT_FL_V4",    "path": "Tires", "fmt": {"bix": 56,  "len": 8,  "max": 127,   "min": -128,                              "sign": true,               "unit": "celsius" },               "name": "Front left tire temperature",     "suggestedMetric": "frontLeftTireTemperature"},
     {"id": "SCION_TP_SET_FL",   "path": "Tires", "fmt": {"bix": 64,  "len": 16, "blsb": true, "max": 32.76, "min": -32.76, "div": 1000,               "sign": true,                   "unit": "bars"   },                                         "name": "Front left tire pressure, set point"},
     {"id": "SCION_TPMS_BAT_FL", "path": "Tires", "fmt": {"bix": 120, "len": 16, "blsb": true, "max": 65535,                                                                           "unit": "scalar" },                                         "name": "Front left tire sensor battery life, months"}
   ]},
@@ -207,7 +207,7 @@
   "signals": [
     {"id": "SCION_TPMS_POS_FR", "path": "Tires", "fmt": {"bix": 32,  "len": 8,  "max": 255,                                                                         "unit": "scalar"  },               "name": "Front right tire sensor position", "description": "0 front left, 1 front right, 2 rear left, 3 rear right"},
     {"id": "SCION_TP_FR_V5",    "path": "Tires", "fmt": {"bix": 40,  "len": 16, "blsb": true, "max": 32.76, "min": -32.76, "div": 1000,               "sign": true,                   "unit": "bars"   },                                          "name": "Front right tire pressure",                                     "suggestedMetric": "frontRightTirePressure"},
-    {"id": "SCION_TT_FR_V3",    "path": "Tires", "fmt": {"bix": 56,  "len": 8,  "max": 127,   "min": -128,                              "sign": true,               "unit": "celsius" },               "name": "Front right tire temperature",     "suggestedMetric": "frontRightTireTemperature"},
+    {"id": "SCION_TT_FR_V4",    "path": "Tires", "fmt": {"bix": 56,  "len": 8,  "max": 127,   "min": -128,                              "sign": true,               "unit": "celsius" },               "name": "Front right tire temperature",     "suggestedMetric": "frontRightTireTemperature"},
     {"id": "SCION_TP_SET_FR",   "path": "Tires", "fmt": {"bix": 64,  "len": 16, "blsb": true, "max": 32.76, "min": -32.76, "div": 1000,               "sign": true,                   "unit": "bars"   },                                          "name": "Front right tire pressure, set point"},
     {"id": "SCION_TPMS_BAT_FR", "path": "Tires", "fmt": {"bix": 120, "len": 16, "blsb": true, "max": 65535,                                                                           "unit": "scalar" },                                          "name": "Front right tire sensor battery life, months"}
   ]},
@@ -215,7 +215,7 @@
   "signals": [
     {"id": "SCION_TPMS_POS_RL", "path": "Tires", "fmt": {"bix": 32,  "len": 8,  "max": 255,                                                                         "unit": "scalar"  },               "name": "Rear left tire sensor position", "description": "0 front left, 1 front right, 2 rear left, 3 rear right"},
     {"id": "SCION_TP_RL_V5",    "path": "Tires", "fmt": {"bix": 40,  "len": 16, "blsb": true, "max": 32.76, "min": -32.76, "div": 1000,               "sign": true,                   "unit": "bars"   },                                        "name": "Rear left tire pressure",                                       "suggestedMetric": "rearLeftTirePressure"},
-    {"id": "SCION_TT_RL_V3",    "path": "Tires", "fmt": {"bix": 56,  "len": 8,  "max": 127,   "min": -128,                              "sign": true,               "unit": "celsius" },               "name": "Rear left tire temperature",     "suggestedMetric": "rearLeftTireTemperature"},
+    {"id": "SCION_TT_RL_V4",    "path": "Tires", "fmt": {"bix": 56,  "len": 8,  "max": 127,   "min": -128,                              "sign": true,               "unit": "celsius" },               "name": "Rear left tire temperature",     "suggestedMetric": "rearLeftTireTemperature"},
     {"id": "SCION_TP_SET_RL",   "path": "Tires", "fmt": {"bix": 64,  "len": 16, "blsb": true, "max": 32.76, "min": -32.76, "div": 1000,               "sign": true,                   "unit": "bars"   },                                        "name": "Rear left tire pressure, set point"},
     {"id": "SCION_TPMS_BAT_RL", "path": "Tires", "fmt": {"bix": 120, "len": 16, "blsb": true, "max": 65535,                                                                           "unit": "scalar" },                                        "name": "Rear left tire sensor battery life, months"}
   ]},
@@ -223,7 +223,7 @@
   "signals": [
     {"id": "SCION_TPMS_POS_RR", "path": "Tires", "fmt": {"bix": 32,  "len": 8,  "max": 255,                                                                         "unit": "scalar"  },               "name": "Rear right tire sensor position", "description": "0 front left, 1 front right, 2 rear left, 3 rear right"},
     {"id": "SCION_TP_RR_V5",    "path": "Tires", "fmt": {"bix": 40,  "len": 16, "blsb": true, "max": 32.76, "min": -32.76, "div": 1000,               "sign": true,                   "unit": "bars"   },                                         "name": "Rear right tire pressure",                                      "suggestedMetric": "rearRightTirePressure"},
-    {"id": "SCION_TT_RR_V3",    "path": "Tires", "fmt": {"bix": 56,  "len": 8,  "max": 127,   "min": -128,                              "sign": true,               "unit": "celsius" },               "name": "Rear right tire temperature",     "suggestedMetric": "rearRightTireTemperature"},
+    {"id": "SCION_TT_RR_V4",    "path": "Tires", "fmt": {"bix": 56,  "len": 8,  "max": 127,   "min": -128,                              "sign": true,               "unit": "celsius" },               "name": "Rear right tire temperature",     "suggestedMetric": "rearRightTireTemperature"},
     {"id": "SCION_TP_SET_RR",   "path": "Tires", "fmt": {"bix": 64,  "len": 16, "blsb": true, "max": 32.76, "min": -32.76, "div": 1000,               "sign": true,                   "unit": "bars"   },                                         "name": "Rear right tire pressure, set point"},
     {"id": "SCION_TPMS_BAT_RR", "path": "Tires", "fmt": {"bix": 120, "len": 16, "blsb": true, "max": 65535,                                                                           "unit": "scalar" },                                         "name": "Rear right tire sensor battery life, months"}
   ]},
@@ -1471,6 +1471,10 @@
   "signals": [
     {"id": "SCION_TURBINE_SPEED", "path": "Movement", "fmt": { "len": 8, "max": 8160, "mul": 32, "unit": "rpm" }, "name": "Turbine speed"}
   ]},
+{ "hdr": "7A3", "rax": "7AB", "dbg": true, "cmd": {"22": "10D2"}, "freq": 1,
+  "signals": [
+    {"id": "SCION_TCM_ATF_T", "path": "Engine", "fmt": { "len": 8, "max": 205, "min": -50, "add": -50, "unit": "celsius" }, "name": "Transmission fluid temperature", "suggestedMetric": "transmissionFluidTemperature"}
+  ]},
 { "hdr": "7B0", "rax": "7B8", "dbg": true, "cmd": {"21": "03"}, "freq": 0.25,
   "signals": [
     {"id": "SCION_TIRE_FR_SPD", "path": "Movement", "fmt": {           "len": 8, "max": 326.4, "mul": 256, "div": 200, "unit": "kilometersPerHour" }, "name": "Front right wheel speed"},
@@ -1508,6 +1512,7 @@
   "signals": [
     {"id": "SCION_VSS",               "path": "Movement", "fmt": { "len": 8, "max": 323.85, "mul": 1.35,              "unit": "kilometersPerHour" }, "name": "Vehicle speed",      "suggestedMetric": "speed", "description": "Current vehicle speed."},
     {"id": "SCION_VEHICLE_SPEED_7B0", "path": "Movement", "fmt": { "len": 8, "max": 326.4,  "mul": 326.4, "div": 255, "unit": "kilometersPerHour" }, "name": "Vehicle speed, 7B0", "suggestedMetric": "speed"},
+    {"id": "SCION_VSS_7B0",           "path": "Movement", "fmt": { "len": 8, "max": 323.85, "mul": 1.35,              "unit": "kilometersPerHour" }, "name": "Vehicle speed, ABS"},
     {"id": "SCION_VSS_V3",            "path": "Movement", "fmt": { "len": 8, "max": 326,    "mul": 1.28,              "unit": "kilometersPerHour" }, "name": "Vehicle speed",      "suggestedMetric": "speed", "description": "Current vehicle speed."}
   ]},
 { "hdr": "7B0", "rax": "7B8", "dbg": true, "cmd": {"21": "3C"}, "freq": 1,
@@ -1707,8 +1712,8 @@
   ]},
 { "hdr": "7C0", "rax": "7C8", "dbg": true, "cmd": {"21": "23"}, "freq": 5,
   "signals": [
-    {"id": "SCION_ECT_7C0",   "path": "Engine", "fmt": { "len": 8, "max": 127.5,             "div": 2, "unit": "celsius" }, "name": "Engine coolant temperature", "suggestedMetric": "engineCoolantTemperature"},
-    {"id": "SCION_COOLANT_T", "path": "Engine", "fmt": { "len": 8, "max": 127.5, "mul": 0.5,           "unit": "celsius" }, "name": "Coolant temperature"}
+    {"id": "SCION_ECT_7C0",   "path": "Engine", "fmt": { "len": 8, "max": 127.5, "div": 2, "unit": "celsius" }, "name": "Engine coolant temperature", "suggestedMetric": "engineCoolantTemperature"},
+    {"id": "SCION_COOLANT_T", "path": "Engine", "fmt": { "len": 8, "max": 127.5, "div": 2, "unit": "celsius" }, "name": "Coolant temperature"}
   ]},
 { "hdr": "7C0", "rax": "7C8", "dbg": true, "cmd": {"21": "29"}, "freq": 5,
   "signals": [
@@ -2697,6 +2702,14 @@
   "signals": [
     {"id": "SCION_EXH_VVT_CLEANING", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Exhaust VVT cleaning self-recovery counter"}
   ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "122F"}, "freq": 0.25,
+  "signals": [
+    {"id": "SCION_CLUTCH_PRESSED", "path": "Control", "fmt": { "len": 8, "max": 100, "div": 2.55, "unit": "percent" }, "name": "Clutch pedal position"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1233"}, "freq": 0.25,
+  "signals": [
+    {"id": "SCION_BRAKE_PRESSED", "path": "Control", "fmt": { "len": 8, "max": 100, "div": 2.55, "unit": "percent" }, "name": "Brake pedal position"}
+  ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1275"}, "freq": 1,
   "signals": [
     {"id": "SCION_THROTTLE_MOTOR_V", "path": "Battery", "fmt": { "len": 8, "max": 20.4, "mul": 2, "div": 25, "unit": "volts" }, "name": "Throttle motor voltage"}
@@ -2932,32 +2945,32 @@
   ]},
 { "hdr": "7E2", "rax": "7EA", "dbg": true, "cmd": {"21": "01"}, "freq": 30,
   "signals": [
-    {"id": "SCION_CALC_LOAD_7E2",      "path": "Engine",   "fmt": {            "len": 8,  "max": 100,               "mul": 20, "div": 51,               "unit": "percent"           }, "name": "Calculated load"},
-    {"id": "SCION_MANIFOLD_AIR_P_7E2", "path": "Engine",   "fmt": {"bix": 8,   "len": 8,  "max": 255,                                                   "unit": "kilopascal"        }, "name": "Manifold air pressure"},
-    {"id": "SCION_IAT_7E2",            "path": "Engine",   "fmt": {"bix": 16,  "len": 8,  "max": 215,   "min": -40,                         "add": -40, "unit": "celsius"           }, "name": "Intake air temperature"},
+    {"id": "SCION_CALC_LOAD_7E2",      "path": "Engine",   "fmt": {            "len": 8,  "max": 100,               "mul": 20, "div": 51,               "unit": "percent"           }, "name": "Calculated load_7e2"},
+    {"id": "SCION_MANIFOLD_AIR_P_7E2", "path": "Engine",   "fmt": {"bix": 8,   "len": 8,  "max": 255,                                                   "unit": "kilopascal"        }, "name": "Manifold air pressure_7e2"},
+    {"id": "SCION_IAT_7E2",            "path": "Engine",   "fmt": {"bix": 16,  "len": 8,  "max": 215,   "min": -40,                         "add": -40, "unit": "celsius"           }, "name": "Intake air temperature_7e2"},
     {"id": "SCION_AAT_7E2",            "path": "Engine",   "fmt": {"bix": 24,  "len": 8,  "max": 215,   "min": -40,                         "add": -40, "unit": "celsius"           }, "name": "Ambient temperature"},
-    {"id": "SCION_ATMOSPHERE_P_7E2",   "path": "Engine",   "fmt": {"bix": 32,  "len": 8,  "max": 255,                                                   "unit": "kilopascal"        }, "name": "Atmosphere pressure"},
-    {"id": "SCION_ECT_7E2",            "path": "Engine",   "fmt": {"bix": 40,  "len": 8,  "max": 215,   "min": -40,                         "add": -40, "unit": "celsius"           }, "name": "Engine coolant temperature"},
-    {"id": "SCION_RPM_7E2",            "path": "Movement", "fmt": {"bix": 48,  "len": 16, "max": 16383,                        "div": 4,                "unit": "rpm"               }, "name": "Engine speed"},
-    {"id": "SCION_VSS_7E2",            "path": "Movement", "fmt": {"bix": 64,  "len": 8,  "max": 255,                                                   "unit": "kilometersPerHour" }, "name": "Vehicle speed"},
+    {"id": "SCION_ATMOSPHERE_P_7E2",   "path": "Engine",   "fmt": {"bix": 32,  "len": 8,  "max": 255,                                                   "unit": "kilopascal"        }, "name": "Atmosphere pressure_7e2"},
+    {"id": "SCION_ECT_7E2",            "path": "Engine",   "fmt": {"bix": 40,  "len": 8,  "max": 215,   "min": -40,                         "add": -40, "unit": "celsius"           }, "name": "Engine coolant temperature_7e2"},
+    {"id": "SCION_RPM_7E2",            "path": "Movement", "fmt": {"bix": 48,  "len": 16, "max": 16383,                        "div": 4,                "unit": "rpm"               }, "name": "Engine speed_7e2"},
+    {"id": "SCION_VSS_7E2",            "path": "Movement", "fmt": {"bix": 64,  "len": 8,  "max": 255,                                                   "unit": "kilometersPerHour" }, "name": "Vehicle speed_7e2"},
     {"id": "SCION_ENG_RUN_TIME",       "path": "Engine",   "fmt": {"bix": 72,  "len": 16, "max": 65535,                                                 "unit": "seconds"           }, "name": "Engine run time"},
     {"id": "SCION_THROTTLE_POS",       "path": "Engine",   "fmt": {"bix": 88,  "len": 8,  "max": 100,               "mul": 20, "div": 51,               "unit": "percent"           }, "name": "Throttle position"},
     {"id": "SCION_ACCEL_PEDAL_POS_1",  "path": "Movement", "fmt": {"bix": 96,  "len": 8,  "max": 100,               "mul": 20, "div": 51,               "unit": "percent"           }, "name": "Accelerator pedal position 1"},
     {"id": "SCION_ACCEL_PEDAL_POS_2",  "path": "Movement", "fmt": {"bix": 104, "len": 8,  "max": 100,               "mul": 20, "div": 51,               "unit": "percent"           }, "name": "Accelerator pedal position 2"},
-    {"id": "SCION_DTC_CLEAR_WARM_UP",  "path": "Engine",   "fmt": {"bix": 112, "len": 8,  "max": 255,                                                   "unit": "scalar"            }, "name": "Warm-up cycles since DTCs cleared"},
-    {"id": "SCION_DTC_CLEAR_RUN_DIST", "path": "Trips",    "fmt": {"bix": 120, "len": 16, "max": 65535,                                                 "unit": "kilometers"        }, "name": "Distance since DTCs cleared"},
-    {"id": "SCION_DTC_CLEAR_MIN_RAW",  "path": "Engine",   "fmt": {"bix": 136, "len": 16, "max": 65535,                                                 "unit": "scalar"            }, "name": "Time since DTCs cleared, raw count"},
-    {"id": "SCION_B",                  "path": "Engine",   "fmt": {"bix": 152, "len": 16, "max": 65.53,                        "div": 1000,             "unit": "volts"             }, "name": "Battery voltage"},
-    {"id": "SCION_ST_CHG_ALL_BAT",     "path": "Battery",  "fmt": {"bix": 168, "len": 8,  "max": 100,               "mul": 20, "div": 51,               "unit": "percent"           }, "name": "State of charge"}
+    {"id": "SCION_DTC_CLEAR_WARM_UP",  "path": "Engine",   "fmt": {"bix": 112, "len": 8,  "max": 255,                                                   "unit": "scalar"            }, "name": "DTC clear warm up"},
+    {"id": "SCION_DTC_CLEAR_RUN_DIST", "path": "Trips",    "fmt": {"bix": 120, "len": 16, "max": 65535,                                                 "unit": "kilometers"        }, "name": "DTC clear run distance"},
+    {"id": "SCION_DTC_CLEAR_MIN_RAW",  "path": "Engine",   "fmt": {"bix": 136, "len": 16, "max": 65535,                                                 "unit": "scalar"            }, "name": "DTC clear min, raw count"},
+    {"id": "SCION_B",                  "path": "Engine",   "fmt": {"bix": 152, "len": 16, "max": 65.53,                        "div": 1000,             "unit": "volts"             }, "name": "+B"},
+    {"id": "SCION_ST_CHG_ALL_BAT",     "path": "Battery",  "fmt": {"bix": 168, "len": 8,  "max": 100,               "mul": 20, "div": 51,               "unit": "percent"           }, "name": "State of charge, all bat"}
   ]},
 { "hdr": "7E2", "rax": "7EA", "dbg": true, "cmd": {"21": "21"}, "freq": 1,
   "signals": [
     {"id": "SCION_CCS_VEH_SPD",      "path": "Engine", "fmt": {           "len": 8, "max": 255, "unit": "kilometersPerHour" }, "name": "Cruise control vehicle speed"},
-    {"id": "SCION_CCS_MEM_VEH_SPD",  "path": "Engine", "fmt": {"bix": 8,  "len": 8, "max": 255, "unit": "kilometersPerHour" }, "name": "Cruise control set speed"},
+    {"id": "SCION_CCS_MEM_VEH_SPD",  "path": "Engine", "fmt": {"bix": 8,  "len": 8, "max": 255, "unit": "kilometersPerHour" }, "name": "Cruise control remembered vehicle speed"},
     {"id": "SCION_CRUISE_OPERATION", "path": "Engine", "fmt": {"bix": 24, "len": 1, "max": 1,   "unit": "offon"             }, "name": "Cruise operation status"},
     {"id": "SCION_CRUISE_CTRL",      "path": "Engine", "fmt": {"bix": 25, "len": 1, "max": 1,   "unit": "offon"             }, "name": "Cruise control"},
     {"id": "SCION_RES_ACC_SWITCH",   "path": "Engine", "fmt": {"bix": 35, "len": 1, "max": 1,   "unit": "offon"             }, "name": "Cruise resume and accelerate switch"},
-    {"id": "SCION_SET_COAST_SWITCH", "path": "Engine", "fmt": {"bix": 36, "len": 1, "max": 1,   "unit": "offon"             }, "name": "Cruise set and coast switch"},
+    {"id": "SCION_SET_COAST_SWITCH", "path": "Engine", "fmt": {"bix": 36, "len": 1, "max": 1,   "unit": "offon"             }, "name": "SET/COAST switch"},
     {"id": "SCION_CANCEL_SWITCH",    "path": "Engine", "fmt": {"bix": 37, "len": 1, "max": 1,   "unit": "offon"             }, "name": "Cancel switch"}
   ]},
 { "hdr": "7E2", "rax": "7EA", "dbg": true, "cmd": {"21": "41"}, "freq": 5,
@@ -2967,7 +2980,7 @@
     {"id": "SCION_SHIFT_SENS_SELECT",     "path": "Transmission", "fmt": {"bix": 16, "len": 8,  "max": 4.9799,             "mul": 83,           "div": 4250,             "unit": "volts"  }, "name": "Shift sensor select main"},
     {"id": "SCION_SHIFT_SENS_SELECT_SUB", "path": "Transmission", "fmt": {"bix": 24, "len": 8,  "max": 4.9799,             "mul": 83,           "div": 4250,             "unit": "volts"  }, "name": "Shift sensor select sub"},
     {"id": "SCION_AUXILIARY_BAT_T",       "path": "Battery",      "fmt": {"bix": 32, "len": 8,  "max": 215,    "min": -40,                                   "add": -40, "unit": "scalar" }, "name": "Auxiliary battery temperature"},
-    {"id": "SCION_ENG_REV_SENS",          "path": "Engine",       "fmt": {"bix": 40, "len": 16, "max": 16383,                                   "div": 4,                "unit": "rpm"    }, "name": "Engine speed sensor"},
+    {"id": "SCION_ENG_REV_SENS",          "path": "Engine",       "fmt": {"bix": 40, "len": 16, "max": 16383,                                   "div": 4,                "unit": "rpm"    }, "name": "Engine rev, sensor"},
     {"id": "SCION_P_POS_SW_TERMINAL",     "path": "Engine",       "fmt": {"bix": 56, "len": 8,  "max": 79.99,              "mul": 0.3137207031,                          "unit": "volts"  }, "name": "Park position switch terminal voltage"}
   ]},
 { "hdr": "7E2", "rax": "7EA", "dbg": true, "cmd": {"21": "61"}, "freq": 5,
@@ -2986,13 +2999,13 @@
   ]},
 { "hdr": "7E2", "rax": "7EA", "dbg": true, "cmd": {"21": "67"}, "freq": 0.25,
   "signals": [
-    {"id": "SCION_MG1_TQ",                  "path": "Engine", "fmt": {           "len": 16, "max": 4095, "min": -4096, "div": 8, "add": -4096, "unit": "newtonMeters" }, "name": "MG1 torque"},
+    {"id": "SCION_MG1_TQ_7E2",              "path": "Engine", "fmt": {           "len": 16, "max": 4095, "min": -4096, "div": 8, "add": -4096, "unit": "newtonMeters" }, "name": "MG1 torque"},
     {"id": "SCION_MG1_TQ_EXECUTION",        "path": "Engine", "fmt": {"bix": 16, "len": 16, "max": 4095, "min": -4096, "div": 8, "add": -4096, "unit": "newtonMeters" }, "name": "MG1 torque execution value"},
     {"id": "SCION_MG1_CTRL_MODE_PWM_0_1_2", "path": "Engine", "fmt": {"bix": 32, "len": 8,  "max": 255,                                        "unit": "scalar"       }, "name": "MG1 control mode, pwm=0,variable pwm=1,rectangular wave=2"}
   ]},
 { "hdr": "7E2", "rax": "7EA", "dbg": true, "cmd": {"21": "68"}, "freq": 0.25,
   "signals": [
-    {"id": "SCION_MG2_TQ",                  "path": "Engine", "fmt": {           "len": 16, "max": 4095, "min": -4096, "div": 8, "add": -4096, "unit": "newtonMeters" }, "name": "MG2 torque"},
+    {"id": "SCION_MG2_TQ_7E2",              "path": "Engine", "fmt": {           "len": 16, "max": 4095, "min": -4096, "div": 8, "add": -4096, "unit": "newtonMeters" }, "name": "MG2 torque"},
     {"id": "SCION_MG2_TQ_EXECUTION",        "path": "Engine", "fmt": {"bix": 16, "len": 16, "max": 4095, "min": -4096, "div": 8, "add": -4096, "unit": "newtonMeters" }, "name": "MG2 torque execution value"},
     {"id": "SCION_MG2_CTRL_MODE_PWM_0_1_2", "path": "Engine", "fmt": {"bix": 32, "len": 8,  "max": 255,                                        "unit": "scalar"       }, "name": "MG2 control mode, pwm=0,variable pwm=1,rectangular wave=2"}
   ]},
@@ -3017,15 +3030,15 @@
     {"id": "SCION_BOOST_CONV_T_AFTER_ON",      "path": "Transmission", "fmt": {"bix": 16, "len": 8,  "max": 215,   "min": -40,           "add": -40, "unit": "celsius" }, "name": "Boost converter temperature at ignition on"},
     {"id": "SCION_BOOST_CONV_T_MAX",           "path": "Transmission", "fmt": {"bix": 24, "len": 8,  "max": 215,   "min": -40,           "add": -40, "unit": "celsius" }, "name": "Boost converter temperature max"},
     {"id": "SCION_CONV_GATE_STAT",             "path": "Transmission", "fmt": {"bix": 32, "len": 1,  "max": 1,                                       "unit": "offon"   }, "name": "Converter gate status"},
-    {"id": "SCION_OVERVOLTAGE_INPUT",          "path": "Battery",      "fmt": {"bix": 33, "len": 1,  "max": 1,                                       "unit": "offon"   }, "name": "Converter input voltage too high"},
-    {"id": "SCION_OVERVOLTAGE_INPUT_INVERTER", "path": "Battery",      "fmt": {"bix": 34, "len": 1,  "max": 1,                                       "unit": "offon"   }, "name": "Inverter input voltage too high"},
-    {"id": "SCION_VL_V_BEFORE_BOOSTING_7E2",   "path": "Battery",      "fmt": {"bix": 40, "len": 16, "max": 32767,             "div": 2,             "unit": "volts"   }, "name": "Boost converter voltage before boosting"},
-    {"id": "SCION_VH_V_AFTER_BOOSTING_7E2",    "path": "Battery",      "fmt": {"bix": 56, "len": 16, "max": 32767,             "div": 2,             "unit": "volts"   }, "name": "Boost converter voltage after boosting"}
+    {"id": "SCION_OVERVOLTAGE_INPUT",          "path": "Battery",      "fmt": {"bix": 33, "len": 1,  "max": 1,                                       "unit": "offon"   }, "name": "Input over-voltage to converter"},
+    {"id": "SCION_OVERVOLTAGE_INPUT_INVERTER", "path": "Battery",      "fmt": {"bix": 34, "len": 1,  "max": 1,                                       "unit": "offon"   }, "name": "Input over-voltage to inverter"},
+    {"id": "SCION_VL_V_BEFORE_BOOSTING_7E2",   "path": "Battery",      "fmt": {"bix": 40, "len": 16, "max": 32767,             "div": 2,             "unit": "volts"   }, "name": "Vl-voltage before boosting"},
+    {"id": "SCION_VH_V_AFTER_BOOSTING_7E2",    "path": "Battery",      "fmt": {"bix": 56, "len": 16, "max": 32767,             "div": 2,             "unit": "volts"   }, "name": "Vh-voltage after boosting"}
   ]},
 { "hdr": "7E2", "rax": "7EA", "dbg": true, "cmd": {"21": "75"}, "freq": 5,
   "signals": [
     {"id": "SCION_PROHIBIT_DC_DC_CONV",           "path": "Transmission", "fmt": {"bix": 1,  "len": 1,  "max": 1,                             "unit": "offon"  }, "name": "Prohibit DC/DC converter signal"},
-    {"id": "SCION_AIRCON_GATE_STAT",              "path": "Engine",       "fmt": {"bix": 2,  "len": 1,  "max": 1,                             "unit": "offon"  }, "name": "Air conditioning gate status"},
+    {"id": "SCION_AIRCON_GATE_STAT",              "path": "Engine",       "fmt": {"bix": 2,  "len": 1,  "max": 1,                             "unit": "offon"  }, "name": "A/C gate status"},
     {"id": "SCION_WATER_PMP_RUNNING",             "path": "Engine",       "fmt": {"bix": 3,  "len": 1,  "max": 1,                             "unit": "offon"  }, "name": "Water pump running"},
     {"id": "SCION_INVERTER_WATER_PMP_REVOLUTION", "path": "Engine",       "fmt": {"bix": 8,  "len": 16, "max": 65535,                         "unit": "rpm"    }, "name": "Inverter water pump revolution"},
     {"id": "SCION_INVERTER_ECT",                  "path": "Engine",       "fmt": {"bix": 24, "len": 8,  "max": 215,   "min": -40, "add": -40, "unit": "scalar" }, "name": "Inverter coolant temperature"}
@@ -3039,7 +3052,7 @@
   ]},
 { "hdr": "7E2", "rax": "7EA", "dbg": true, "cmd": {"21": "79"}, "freq": 1,
   "signals": [
-    {"id": "SCION_DCDC_CNV_TGT_DUTY",  "path": "Engine",       "fmt": {           "len": 16, "max": 399,  "mul": 1333, "div": 218450, "unit": "percent" }, "name": "DC-DC converter target pulse duty"},
+    {"id": "SCION_DCDC_CNV_TGT_DUTY",  "path": "Engine",       "fmt": {           "len": 16, "max": 399,  "mul": 1333, "div": 218450, "unit": "percent" }, "name": "DC/DC converter, target pulse duty"},
     {"id": "SCION_WATER_PMP_RUN_CTRL", "path": "Engine",       "fmt": {"bix": 16, "len": 8,  "max": 1593, "mul": 25,   "div": 4,      "unit": "percent" }, "name": "Water pump run control duty"},
     {"id": "SCION_CONV_SHUTDOWN",      "path": "Transmission", "fmt": {"bix": 24, "len": 1,  "max": 1,                                "unit": "offon"   }, "name": "Converter shutdown"},
     {"id": "SCION_CONV_FAIL",          "path": "Transmission", "fmt": {"bix": 25, "len": 1,  "max": 1,                                "unit": "offon"   }, "name": "Converter fail"}
@@ -3053,7 +3066,7 @@
   "signals": [
     {"id": "SCION_BOOST_RAT",                                "path": "Engine",       "fmt": {           "len": 8, "max": 127,              "div": 2, "unit": "percent" }, "name": "Boost ratio"},
     {"id": "SCION_CONV_CARRIER_9_0_9_1_8_2_8_3_7_4_7_5_4_6", "path": "Transmission", "fmt": {"bix": 8,  "len": 8, "max": 255,                        "unit": "scalar"  }, "name": "Converter carrier frequency, 9.55khz=0,9.13khz=1,8.71khz=2,8.29khz=3,7.87khz=4,7.45khz=5,4.8khz=6"},
-    {"id": "SCION_AC_CONS_POWER_W",                          "path": "Engine",       "fmt": {"bix": 16, "len": 8, "max": 12750, "mul": 50,           "unit": "scalar"  }, "name": "Air conditioning power consumption"}
+    {"id": "SCION_AC_CONS_POWER_W",                          "path": "Engine",       "fmt": {"bix": 16, "len": 8, "max": 12750, "mul": 50,           "unit": "scalar"  }, "name": "Air conditioning consumption power, w"}
   ]},
 { "hdr": "7E2", "rax": "7EA", "dbg": true, "cmd": {"21": "81"}, "freq": 5,
   "signals": [
@@ -3078,9 +3091,9 @@
 { "hdr": "7E2", "rax": "7EA", "dbg": true, "cmd": {"21": "87"}, "freq": 1,
   "signals": [
     {"id": "SCION_HVBAT_IAT",  "path": "Battery", "fmt": {           "len": 16, "max": 205, "min": -50, "mul": 0.0039047837, "add": -50, "unit": "celsius" }, "name": "High voltage battery intake air temperature"},
-    {"id": "SCION_T_BATT_TB1", "path": "Battery", "fmt": {"bix": 16, "len": 16, "max": 205, "min": -50, "mul": 0.0039047837, "add": -50, "unit": "celsius" }, "name": "HV battery temperature 1"},
-    {"id": "SCION_T_BATT_TB2", "path": "Battery", "fmt": {"bix": 32, "len": 16, "max": 205, "min": -50, "mul": 0.0039047837, "add": -50, "unit": "celsius" }, "name": "HV battery temperature 2"},
-    {"id": "SCION_T_BATT_TB3", "path": "Battery", "fmt": {"bix": 48, "len": 16, "max": 205, "min": -50, "mul": 0.0039047837, "add": -50, "unit": "celsius" }, "name": "HV battery temperature 3"}
+    {"id": "SCION_T_BATT_TB1", "path": "Engine",  "fmt": {"bix": 16, "len": 16, "max": 205, "min": -50, "mul": 0.0039047837, "add": -50, "unit": "celsius" }, "name": "Battery temperature TB1"},
+    {"id": "SCION_T_BATT_TB2", "path": "Engine",  "fmt": {"bix": 32, "len": 16, "max": 205, "min": -50, "mul": 0.0039047837, "add": -50, "unit": "celsius" }, "name": "Battery temperature TB2"},
+    {"id": "SCION_T_BATT_TB3", "path": "Engine",  "fmt": {"bix": 48, "len": 16, "max": 205, "min": -50, "mul": 0.0039047837, "add": -50, "unit": "celsius" }, "name": "Battery temperature TB3"}
   ]},
 { "hdr": "7E2", "rax": "7EA", "dbg": true, "cmd": {"21": "8A"}, "freq": 1,
   "signals": [
@@ -3094,9 +3107,9 @@
 { "hdr": "7E2", "rax": "7EA", "dbg": true, "cmd": {"21": "92"}, "freq": 1,
   "signals": [
     {"id": "SCION_BAT_BLOCK_MIN_V",          "path": "Battery", "fmt": {            "len": 16, "max": 79.99, "mul": 0.0012205692,           "unit": "volts"  }, "name": "Battery block, minimum voltage"},
-    {"id": "SCION_BAT_BLOCK_NUMBER_MIN_V",   "path": "Battery", "fmt": {"bix": 16,  "len": 8,  "max": 256,                        "add": 1, "unit": "scalar" }, "name": "Battery block with the minimum voltage"},
+    {"id": "SCION_BAT_BLOCK_NUMBER_MIN_V",   "path": "Battery", "fmt": {"bix": 16,  "len": 8,  "max": 256,                        "add": 1, "unit": "scalar" }, "name": "Battery block number with, minimum voltage"},
     {"id": "SCION_BAT_BLOCK_MAX_V",          "path": "Battery", "fmt": {"bix": 24,  "len": 16, "max": 79.99, "mul": 0.0012205692,           "unit": "volts"  }, "name": "Battery block, maximum voltage"},
-    {"id": "SCION_BAT_BLOCK_NUMBER_MAX_V",   "path": "Battery", "fmt": {"bix": 40,  "len": 8,  "max": 256,                        "add": 1, "unit": "scalar" }, "name": "Battery block with the maximum voltage"},
+    {"id": "SCION_BAT_BLOCK_NUMBER_MAX_V",   "path": "Battery", "fmt": {"bix": 40,  "len": 8,  "max": 256,                        "add": 1, "unit": "scalar" }, "name": "Battery block number with, maximum voltage"},
     {"id": "SCION_NUM_BAT_BLOCKS",           "path": "Battery", "fmt": {"bix": 48,  "len": 8,  "max": 255,                                  "unit": "scalar" }, "name": "Number of battery blocks"},
     {"id": "SCION_ACCUMULATED_TIME_BAT",     "path": "Battery", "fmt": {"bix": 56,  "len": 16, "max": 65535,                                "unit": "scalar" }, "name": "Accumulated time of battery low"},
     {"id": "SCION_ACCUMULATED_TIME_DC",      "path": "Engine",  "fmt": {"bix": 72,  "len": 16, "max": 65535,                                "unit": "scalar" }, "name": "Accumulated time of DC inhibit"},
@@ -3143,7 +3156,7 @@
 { "hdr": "7E2", "rax": "7EA", "dbg": true, "cmd": {"21": "C1"}, "freq": 1,
   "signals": [
     {"id": "SCION_DESTINATION_AMERICA_65", "path": "Engine", "fmt": {"bix": 120,       "len": 8, "max": 255, "unit": "scalar" }, "name": "Destination code"},
-    {"id": "SCION_MODEL_CODE_7E2_RAW",     "path": "Engine", "fmt": {"bix": 102811536, "len": 8, "max": 255, "unit": "scalar" }, "name": "Model code, raw count"},
+    {"id": "SCION_MODEL_CODE_7E2_RAW",     "path": "Engine", "fmt": {"bix": 102811536, "len": 8, "max": 255, "unit": "scalar" }, "name": "Model code_7e2, raw count"},
     {"id": "SCION_ENG_CODE_P410_RAW",      "path": "Engine", "fmt": {"bix": 695928576, "len": 8, "max": 255, "unit": "scalar" }, "name": "Engine code, P410, raw count"}
   ]},
 { "hdr": "7E2", "rax": "7EA", "dbg": true, "cmd": {"21": "C2"}, "freq": 1,
@@ -3153,11 +3166,11 @@
 { "hdr": "7E2", "rax": "7EA", "dbg": true, "cmd": {"21": "C3"}, "freq": 0.25,
   "signals": [
     {"id": "SCION_MG2_RPM",       "path": "Engine",       "fmt": {            "len": 16, "max": 49152,    "min": -16383,                          "add": -16383, "unit": "rpm"          }, "name": "Motor generator 2 speed"},
-    {"id": "SCION_MG2_TQ_V2",     "path": "Engine",       "fmt": {"bix": 16,  "len": 16, "max": 7691.875, "min": -500,                 "div": 8,  "add": -500,   "unit": "newtonMeters" }, "name": "Motor generator 2 torque"},
+    {"id": "SCION_MG2_TQ",        "path": "Engine",       "fmt": {"bix": 16,  "len": 16, "max": 7691.875, "min": -500,                 "div": 8,  "add": -500,   "unit": "newtonMeters" }, "name": "Motor generator 2 torque"},
     {"id": "SCION_REGEN_TQ",      "path": "Control",      "fmt": {"bix": 32,  "len": 8,  "max": 1020,                    "mul": 4,                               "unit": "newtonMeters" }, "name": "Regenerative brake torque"},
     {"id": "SCION_REGEN_TQ_REQ",  "path": "Control",      "fmt": {"bix": 40,  "len": 8,  "max": 1020,                    "mul": 4,                               "unit": "newtonMeters" }, "name": "Regenerative brake torque requested"},
     {"id": "SCION_MG1_RPM",       "path": "Engine",       "fmt": {"bix": 48,  "len": 16, "max": 49152,    "min": -16383,                          "add": -16383, "unit": "rpm"          }, "name": "Motor generator 1 speed"},
-    {"id": "SCION_MG1_TQ_V2",     "path": "Engine",       "fmt": {"bix": 64,  "len": 16, "max": 7691.875, "min": -500,                 "div": 8,  "add": -500,   "unit": "newtonMeters" }, "name": "Motor generator 1 torque"},
+    {"id": "SCION_MG1_TQ",        "path": "Engine",       "fmt": {"bix": 64,  "len": 16, "max": 7691.875, "min": -500,                 "div": 8,  "add": -500,   "unit": "newtonMeters" }, "name": "Motor generator 1 torque"},
     {"id": "SCION_PWR_REQ",       "path": "Engine",       "fmt": {"bix": 80,  "len": 16, "max": 655350,                  "mul": 10,                              "unit": "watts"        }, "name": "Power request"},
     {"id": "SCION_ENG_RPM_TGT",   "path": "Engine",       "fmt": {"bix": 96,  "len": 16, "max": 65535,                                                           "unit": "rpm"          }, "name": "Target engine speed"},
     {"id": "SCION_ENG_RPM",       "path": "Engine",       "fmt": {"bix": 112, "len": 16, "max": 65535,                                                           "unit": "rpm"          }, "name": "Engine speed",                           "suggestedMetric": "engineSpeed"},
@@ -3277,8 +3290,8 @@
   ]},
 { "hdr": "7E2", "rax": "7EA", "dbg": true, "cmd": {"21": "E1"}, "freq": 1,
   "signals": [
-    {"id": "SCION_NUM_CURRENT_CODE", "path": "Engine", "fmt": {          "len": 8, "max": 255, "unit": "scalar" }, "name": "Number of current DTCs"},
-    {"id": "SCION_NUM_HISTORY_CODE", "path": "Engine", "fmt": {"bix": 8, "len": 8, "max": 255, "unit": "scalar" }, "name": "Number of history DTCs"}
+    {"id": "SCION_NUM_CURRENT_CODE", "path": "Engine", "fmt": {          "len": 8, "max": 255, "unit": "scalar" }, "name": "Number of current code"},
+    {"id": "SCION_NUM_HISTORY_CODE", "path": "Engine", "fmt": {"bix": 8, "len": 8, "max": 255, "unit": "scalar" }, "name": "Number of history code"}
   ]},
 { "hdr": "7E3", "rax": "7EB", "dbg": true, "cmd": {"21": "CE"}, "freq": 1,
   "signals": [
