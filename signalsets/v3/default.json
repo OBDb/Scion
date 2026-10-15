@@ -107,6 +107,10 @@
   "signals": [
     {"id": "SCION_LOAD_V2", "path": "Engine", "fmt": { "len": 8, "max": 191.25, "mul": 0.75, "unit": "percent" }, "name": "Engine load"}
   ]},
+{ "hdr": "6F1", "rax": "612", "eax": "12", "fcm1": true, "dbg": true, "cmd": {"22": "5822"}, "freq": 30,
+  "signals": [
+    {"id": "SCION_EOT_DME_V2", "path": "Engine", "fmt": { "len": 8, "max": 207, "min": -48, "add": -48, "unit": "celsius" }, "name": "Engine oil temperature (engine computer)"}
+  ]},
 { "hdr": "6F1", "rax": "612", "eax": "12", "fcm1": true, "dbg": true, "cmd": {"22": "582C"}, "freq": 1,
   "signals": [
     {"id": "SCION_LAMBDA_2", "path": "Engine", "fmt": { "len": 16, "max": 15.99, "div": 4096, "nullmax": 15.99, "unit": "scalar" }, "name": "Lambda 2"}
@@ -3359,22 +3363,6 @@
     {"id": "SCION_HVBAT_BLOCK_12_R",      "path": "Battery", "fmt": {"bix": 208, "len": 8,  "max": 255,                                                "unit": "milliohms" }, "name": "HV battery block 12 internal resistance"},
     {"id": "SCION_HVBAT_BLOCK_13_R",      "path": "Battery", "fmt": {"bix": 216, "len": 8,  "max": 255,                                                "unit": "milliohms" }, "name": "HV battery block 13 internal resistance"},
     {"id": "SCION_HVBAT_BLOCK_14_R",      "path": "Battery", "fmt": {"bix": 224, "len": 8,  "max": 255,                                                "unit": "milliohms" }, "name": "HV battery block 14 internal resistance"}
-  ]},
-{ "hdr": "812A", "proto": "14230", "tst": "F0", "dbg": true, "cmd": {"21": "16"}, "freq": 5,
-  "signals": [
-    {"id": "SCION_TT_FL_KL",    "path": "Tires", "fmt": {           "len": 8, "max": 215, "min": -40, "add": -40, "nullmin": -40, "nullmax": 215, "unit": "celsius" }, "name": "Tire temperature, front left",  "suggestedMetric": "frontLeftTireTemperature"},
-    {"id": "SCION_TT_FR_KL",    "path": "Tires", "fmt": {"bix": 8,  "len": 8, "max": 215, "min": -40, "add": -40, "nullmin": -40, "nullmax": 215, "unit": "celsius" }, "name": "Tire temperature, front right", "suggestedMetric": "frontRightTireTemperature"},
-    {"id": "SCION_TT_RL_KL",    "path": "Tires", "fmt": {"bix": 16, "len": 8, "max": 215, "min": -40, "add": -40, "nullmin": -40, "nullmax": 215, "unit": "celsius" }, "name": "Tire temperature, rear left",   "suggestedMetric": "rearLeftTireTemperature"},
-    {"id": "SCION_TT_RR_KL",    "path": "Tires", "fmt": {"bix": 24, "len": 8, "max": 215, "min": -40, "add": -40, "nullmin": -40, "nullmax": 215, "unit": "celsius" }, "name": "Tire temperature, rear right",  "suggestedMetric": "rearRightTireTemperature"},
-    {"id": "SCION_TT_SPARE_KL", "path": "Tires", "fmt": {"bix": 32, "len": 8, "max": 215, "min": -40, "add": -40, "nullmin": -40, "nullmax": 215, "unit": "celsius" }, "name": "Tire temperature, spare"}
-  ]},
-{ "hdr": "812A", "proto": "14230", "tst": "F0", "dbg": true, "cmd": {"21": "30"}, "freq": 5,
-  "signals": [
-    {"id": "SCION_TP_FL_KL",    "path": "Tires", "fmt": {           "len": 8, "max": 535.5, "mul": 2.1, "nullmin": 0, "nullmax": 535.5, "unit": "kilopascal" }, "name": "Tire pressure, front left",  "suggestedMetric": "frontLeftTirePressure"},
-    {"id": "SCION_TP_FR_KL",    "path": "Tires", "fmt": {"bix": 8,  "len": 8, "max": 535.5, "mul": 2.1, "nullmin": 0, "nullmax": 535.5, "unit": "kilopascal" }, "name": "Tire pressure, front right", "suggestedMetric": "frontRightTirePressure"},
-    {"id": "SCION_TP_RL_KL",    "path": "Tires", "fmt": {"bix": 16, "len": 8, "max": 535.5, "mul": 2.1, "nullmin": 0, "nullmax": 535.5, "unit": "kilopascal" }, "name": "Tire pressure, rear left",   "suggestedMetric": "rearLeftTirePressure"},
-    {"id": "SCION_TP_RR_KL",    "path": "Tires", "fmt": {"bix": 24, "len": 8, "max": 535.5, "mul": 2.1, "nullmin": 0, "nullmax": 535.5, "unit": "kilopascal" }, "name": "Tire pressure, rear right",  "suggestedMetric": "rearRightTirePressure"},
-    {"id": "SCION_TP_SPARE_KL", "path": "Tires", "fmt": {"bix": 32, "len": 8, "max": 535.5, "mul": 2.1, "nullmin": 0, "nullmax": 535.5, "unit": "kilopascal" }, "name": "Tire pressure, spare"}
   ]}
 ]
 }
