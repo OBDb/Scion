@@ -2132,6 +2132,7 @@
     {"id": "SCION_VEHICLE_SPEED_7E0_V2",         "path": "Movement", "fmt": {"bix": 80,  "len": 8,  "max": 255,                                                        "unit": "kilometersPerHour" }, "name": "Vehicle speed",                     "suggestedMetric": "speed"},
     {"id": "SCION_ENGINE_SPEED_V3",              "path": "Movement", "fmt": {"bix": 80,  "len": 16, "max": 16383,                                                      "unit": "rpm"               }, "name": "Engine speed"},
     {"id": "SCION_ENGINE_SPEED",                 "path": "Movement", "fmt": {"bix": 80,  "len": 16, "max": 16383.75,                         "div": 4,                 "unit": "rpm"               }, "name": "Engine speed"},
+    {"id": "SCION_VEHICLE_SPEED_V2",             "path": "Movement", "fmt": {"bix": 80,  "len": 8,  "max": 255,                                                        "unit": "kilometersPerHour" }, "name": "Vehicle speed"},
     {"id": "SCION_VEHICLE_SPEED_7E0",            "path": "Movement", "fmt": {"bix": 88,  "len": 8,  "max": 255,                                                        "unit": "kilometersPerHour" }, "name": "Vehicle speed",                     "suggestedMetric": "speed"},
     {"id": "SCION_ENGINE_RUN_TIME_V2",           "path": "Engine",   "fmt": {"bix": 88,  "len": 16, "max": 65535,                                                      "unit": "seconds"           }, "name": "Engine run time"},
     {"id": "SCION_ENGINE_RUN_TIME",              "path": "Engine",   "fmt": {"bix": 96,  "len": 16, "max": 65535,                                                      "unit": "seconds"           }, "name": "Engine run time"},
@@ -2375,11 +2376,15 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "3A"}, "freq": 1,
   "signals": [
-    {"id": "SCION_VALVEMATIC_TGT_ANG", "path": "Engine", "fmt": {           "len": 16, "max": 639.9, "mul": 5,  "div": 512,   "unit": "degrees" }, "name": "Valvematic, target angle"},
-    {"id": "SCION_PURGE_CUT_VSV_DUTY", "path": "Engine", "fmt": {"bix": 16, "len": 16, "max": 399.9, "mul": 25, "div": 4096,  "unit": "percent" }, "name": "Purge cut vacuum switching valve duty"},
-    {"id": "SCION_F_HEATER_DUTY_B1S1", "path": "Engine", "fmt": {"bix": 32, "len": 16, "max": 399.9, "mul": 25, "div": 4096,  "unit": "percent" }, "name": "A/F heater duty bank 1 sensor 1"},
-    {"id": "SCION_O2_HEATER_CURR_VAL", "path": "Engine", "fmt": {"bix": 48, "len": 16, "max": 4.999,            "div": 13107, "unit": "amps"    }, "name": "O2 heater current val bank 1 sensor 2"},
-    {"id": "SCION_O2_HEATER_B1S2",     "path": "Engine", "fmt": {"bix": 68, "len": 1,  "max": 1,                              "unit": "scalar"  }, "name": "O2 heater b1s2_active"}
+    {"id": "SCION_VALVEMATIC_TGT_ANG",      "path": "Engine", "fmt": {           "len": 16, "max": 639.9, "mul": 5,  "div": 512,   "unit": "degrees" }, "name": "Valvematic, target angle"},
+    {"id": "SCION_PURGE_CUT_VSV_DUTY",      "path": "Engine", "fmt": {"bix": 16, "len": 16, "max": 399.9, "mul": 25, "div": 4096,  "unit": "percent" }, "name": "Purge cut vacuum switching valve duty"},
+    {"id": "SCION_PURGE_CUT_VSV_DUTY_XU40", "path": "Engine", "fmt": {"bix": 24, "len": 16, "max": 399.9, "mul": 25, "div": 4096,  "unit": "percent" }, "name": "Purge cut vacuum switching valve duty, 2013 and earlier"},
+    {"id": "SCION_F_HEATER_DUTY_B1S1",      "path": "Engine", "fmt": {"bix": 32, "len": 16, "max": 399.9, "mul": 25, "div": 4096,  "unit": "percent" }, "name": "A/F heater duty bank 1 sensor 1"},
+    {"id": "SCION_F_HEATER_DUTY_B1S1_XU40", "path": "Engine", "fmt": {"bix": 40, "len": 16, "max": 399.9, "mul": 25, "div": 4096,  "unit": "percent" }, "name": "A/F heater duty bank 1 sensor 1, 2013 and earlier"},
+    {"id": "SCION_O2_HEATER_CURR_VAL",      "path": "Engine", "fmt": {"bix": 48, "len": 16, "max": 4.999,            "div": 13107, "unit": "amps"    }, "name": "O2 heater current val bank 1 sensor 2"},
+    {"id": "SCION_O2_HEATER_CURR_VAL_XU40", "path": "Engine", "fmt": {"bix": 56, "len": 16, "max": 4.999,            "div": 13107, "unit": "amps"    }, "name": "O2 heater current val bank 1 sensor 2, 2013 and earlier"},
+    {"id": "SCION_O2_HEATER_B1S2",          "path": "Engine", "fmt": {"bix": 68, "len": 1,  "max": 1,                              "unit": "scalar"  }, "name": "O2 heater b1s2_active"},
+    {"id": "SCION_O2_HEATER_B1S2_XU40",     "path": "Engine", "fmt": {"bix": 76, "len": 1,  "max": 1,                              "unit": "scalar"  }, "name": "O2 heater b1s2_active, 2013 and earlier"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "3C"}, "freq": 1,
   "signals": [
@@ -2425,9 +2430,10 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "44"}, "freq": 1,
   "signals": [
-    {"id": "SCION_VARIABLE_VLV_TIM_AIM_1", "path": "Engine", "fmt": {           "len": 16, "max": 399, "mul": 1333,         "div": 218450, "unit": "percent" }, "name": "Variable valve timing aim angle 1"},
-    {"id": "SCION_VARIABLE_VLV_TIM_OIL_1", "path": "Engine", "fmt": {"bix": 16, "len": 16, "max": 399, "mul": 0.0061020829,                "unit": "percent" }, "name": "Variable valve timing oil control valve duty 1"},
-    {"id": "SCION_VARIABLE_VLV_TIM_1",     "path": "Engine", "fmt": {"bix": 32, "len": 16, "max": 639, "mul": 0.0097642481,                "unit": "degrees" }, "name": "Variable valve timing change angle 1"}
+    {"id": "SCION_VARIABLE_VLV_TIM_AIM_1",     "path": "Engine", "fmt": {           "len": 16, "max": 399,   "mul": 1333,         "div": 218450, "unit": "percent" }, "name": "Variable valve timing aim angle 1"},
+    {"id": "SCION_VARIABLE_VLV_TIM_AIM_1_RAW", "path": "Engine", "fmt": {           "len": 16, "max": 65535,                                     "unit": "scalar"  }, "name": "Variable valve timing aim angle 1, raw count"},
+    {"id": "SCION_VARIABLE_VLV_TIM_OIL_1",     "path": "Engine", "fmt": {"bix": 16, "len": 16, "max": 399,   "mul": 0.0061020829,                "unit": "percent" }, "name": "Variable valve timing oil control valve duty 1"},
+    {"id": "SCION_VARIABLE_VLV_TIM_1",         "path": "Engine", "fmt": {"bix": 32, "len": 16, "max": 639,   "mul": 0.0097642481,                "unit": "degrees" }, "name": "Variable valve timing change angle 1"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "45"}, "freq": 1,
   "signals": [
