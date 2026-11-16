@@ -33,11 +33,11 @@
   ]},
 { "hdr": "6F1", "rax": "612", "eax": "12", "fcm1": true, "dbg": true, "cmd": {"22": "4201"}, "freq": 5,
   "signals": [
-    {"id": "SCION_BARO", "path": "Engine", "fmt": { "len": 16, "max": 255.99, "div": 256, "unit": "kilopascal" }, "name": "Barometric pressure"}
+    {"id": "SCION_BARO", "path": "Engine", "fmt": { "len": 16, "max": 255.99, "div": 256, "unit": "kilopascal" }, "name": "Barometric pressure", "suggestedMetric": "barometricPressure"}
   ]},
 { "hdr": "6F1", "rax": "612", "eax": "12", "fcm1": true, "dbg": true, "cmd": {"22": "4205"}, "freq": 0.25,
   "signals": [
-    {"id": "SCION_BOOST_P", "path": "Engine", "fmt": { "len": 16, "max": 511.99, "div": 128, "unit": "kilopascal" }, "name": "Boost pressure"}
+    {"id": "SCION_BOOST_P", "path": "Engine", "fmt": { "len": 16, "max": 511.99, "div": 128, "unit": "kilopascal" }, "name": "Boost pressure", "suggestedMetric": "absoluteBoostPressure"}
   ]},
 { "hdr": "6F1", "rax": "612", "eax": "12", "fcm1": true, "dbg": true, "cmd": {"22": "4408"}, "freq": 5,
   "signals": [
@@ -53,7 +53,7 @@
   ]},
 { "hdr": "6F1", "rax": "612", "eax": "12", "fcm1": true, "dbg": true, "cmd": {"22": "4A2D"}, "freq": 0.25,
   "signals": [
-    {"id": "SCION_MAP", "path": "Engine", "fmt": { "len": 16, "max": 511.99, "div": 128, "unit": "kilopascal" }, "name": "Intake manifold pressure"}
+    {"id": "SCION_MAP_V2", "path": "Engine", "fmt": { "len": 16, "max": 511.99, "div": 128, "unit": "kilopascal" }, "name": "Intake manifold pressure", "suggestedMetric": "absoluteBoostPressure"}
   ]},
 { "hdr": "6F1", "rax": "612", "eax": "12", "fcm1": true, "dbg": true, "cmd": {"22": "4A2E"}, "freq": 3600,
   "signals": [
@@ -101,7 +101,7 @@
   ]},
 { "hdr": "6F1", "rax": "612", "eax": "12", "fcm1": true, "dbg": true, "cmd": {"22": "580F"}, "freq": 5,
   "signals": [
-    {"id": "SCION_IAT_DME", "path": "Engine", "fmt": { "len": 8, "max": 143.25, "min": -48, "mul": 0.75, "add": -48, "unit": "celsius" }, "name": "Intake air temperature"}
+    {"id": "SCION_IAT_DME", "path": "Engine", "fmt": { "len": 8, "max": 143.25, "min": -48, "mul": 0.75, "add": -48, "unit": "celsius" }, "name": "Intake air temperature", "suggestedMetric": "intakeAirTemperature"}
   ]},
 { "hdr": "6F1", "rax": "612", "eax": "12", "fcm1": true, "dbg": true, "cmd": {"22": "5813"}, "freq": 0.25,
   "signals": [
@@ -576,7 +576,7 @@
   ]},
 { "hdr": "700", "rax": "708", "dbg": true, "cmd": {"22": "1621"}, "freq": 1,
   "signals": [
-    {"id": "SCION_GEAR_700", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Gear"}
+    {"id": "SCION_GEAR_700", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Gear", "suggestedMetric": "gear"}
   ]},
 { "hdr": "700", "rax": "708", "dbg": true, "cmd": {"22": "1622"}, "freq": 1,
   "signals": [
@@ -1316,7 +1316,7 @@
   ]},
 { "hdr": "7A2", "rax": "7AA", "dbg": true, "cmd": {"22": "10E3"}, "freq": 1,
   "signals": [
-    {"id": "SCION_CRUISE_VSS_T", "path": "Cruise control", "fmt": { "len": 8, "max": 255, "unit": "kilometersPerHour" }, "name": "Cruise speed, set"}
+    {"id": "SCION_CRUISE_VSS_T", "path": "Cruise control", "fmt": { "len": 8, "max": 255, "unit": "kilometersPerHour" }, "name": "Cruise speed, set", "suggestedMetric": "cruiseSetSpeed"}
   ]},
 { "hdr": "7A2", "rax": "7AA", "dbg": true, "cmd": {"22": "10E5"}, "freq": 30,
   "signals": [
@@ -1554,8 +1554,8 @@
   ]},
 { "hdr": "7B0", "rax": "7B8", "dbg": true, "cmd": {"21": "47"}, "freq": 0.25,
   "signals": [
-    {"id": "SCION_LAT_G",          "path": "Orientation", "fmt": {           "len": 8,  "max": 2.5,    "min": -2.5,    "div": 50,                 "sign": true, "unit": "gravity" }, "name": "Lateral g"},
-    {"id": "SCION_LNG_G",          "path": "Orientation", "fmt": {"bix": 8,  "len": 8,  "max": 2.5,    "min": -2.5,    "div": 50,                 "sign": true, "unit": "gravity" }, "name": "Longitudinal g"},
+    {"id": "SCION_LAT_G",          "path": "Orientation", "fmt": {           "len": 8,  "max": 2.5,    "min": -2.5,    "div": 50,                 "sign": true, "unit": "gravity" }, "name": "Lateral g",                   "suggestedMetric": "lateralAcceleration"},
+    {"id": "SCION_LNG_G",          "path": "Orientation", "fmt": {"bix": 8,  "len": 8,  "max": 2.5,    "min": -2.5,    "div": 50,                 "sign": true, "unit": "gravity" }, "name": "Longitudinal g",              "suggestedMetric": "longitudinalAcceleration"},
     {"id": "SCION_YAW_RATE_V2",    "path": "Orientation", "fmt": {"bix": 16, "len": 8,  "max": 127,    "min": -128,               "add": -128,                  "unit": "degrees" }, "name": "Yaw rate value, degrees/sec"},
     {"id": "SCION_YAW",            "path": "Orientation", "fmt": {"bix": 16, "len": 8,  "max": 127,    "min": -128,               "add": -128,                  "unit": "scalar"  }, "name": "Yaw rate value"},
     {"id": "SCION_STEER_ANGLE_V2", "path": "Control",     "fmt": {"bix": 24, "len": 16, "max": 3276,   "min": -3276,   "div": 10, "add": -3276.8,               "unit": "degrees" }, "name": "Steering wheel angle",        "description": "Positive = counter-clockwise, negative = clockwise."},
@@ -1872,7 +1872,7 @@
   ]},
 { "hdr": "7D2", "rax": "7DA", "fcm1": true, "dbg": true, "cmd": {"22": "1004"}, "freq": 5,
   "signals": [
-    {"id": "SCION_DRIVE_MODE", "path": "Drivetrain", "name": "Drive mode", "fmt": {"len": 8, "map": {
+    {"id": "SCION_DRIVE_MODE", "path": "Drivetrain", "name": "Drive mode", "suggestedMetric": "driveMode", "fmt": {"len": 8, "map": {
           "0":  { "description": "Normal",    "value": "NORMAL" },
           "1":  { "description": "Power",     "value": "POWER" },
           "2":  { "description": "Sport",     "value": "SPORT" },
@@ -1899,7 +1899,7 @@
   ]},
 { "hdr": "7D2", "rax": "7DA", "fcm1": true, "dbg": true, "cmd": {"22": "1061"}, "freq": 1,
   "signals": [
-    {"id": "SCION_SHIFT", "path": "Transmission", "name": "Shift position", "fmt": {"len": 8, "map": {
+    {"id": "SCION_SHIFT", "path": "Transmission", "name": "Shift position", "suggestedMetric": "gearSelector", "fmt": {"len": 8, "map": {
           "0": { "description": "Park",    "value": "P" },
           "2": { "description": "Reverse", "value": "R" },
           "4": { "description": "Neutral", "value": "N" },
@@ -2107,20 +2107,19 @@
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "01"}, "freq": 5,
   "signals": [
     {"id": "SCION_CALCULATED_LOAD_7E0",          "path": "Engine",   "fmt": {            "len": 8,  "max": 100,                  "mul": 100, "div": 255,               "unit": "percent"           }, "name": "Calculated load"},
-    {"id": "SCION_N210_MIL",                     "path": "DTCs",     "fmt": {            "len": 1,  "max": 1,                                                          "unit": "offon"             }, "name": "MIL"},
+    {"id": "SCION_N210_MIL",                     "path": "DTCs",     "fmt": {            "len": 1,  "max": 1,                                                          "unit": "offon"             }, "name": "MIL",                               "suggestedMetric": "checkEngineLightOn"},
     {"id": "SCION_LOAD",                         "path": "Engine",   "fmt": {            "len": 8,  "max": 100,                  "mul": 100, "div": 255,               "unit": "percent"           }, "name": "Calculated load",                   "suggestedMetric": "engineLoad"},
     {"id": "SCION_N210_DTC_COUNT",               "path": "DTCs",     "fmt": {"bix": 1,   "len": 7,  "max": 127,                                                        "unit": "scalar"            }, "name": "Number of emission DTCs"},
     {"id": "SCION_VEHICLE_LOAD",                 "path": "Engine",   "fmt": {"bix": 8,   "len": 16, "max": 100,                  "mul": 100, "div": 65535,             "unit": "percent"           }, "name": "Vehicle load"},
     {"id": "SCION_VEHICLE_LOAD_V2",              "path": "Engine",   "fmt": {"bix": 8,   "len": 16, "max": 25700,                "mul": 100, "div": 255,               "unit": "percent"           }, "name": "Vehicle load"},
     {"id": "SCION_MAF_7E0",                      "path": "Engine",   "fmt": {"bix": 24,  "len": 16, "max": 655.35,                           "div": 100,               "unit": "gramsPerSecond"    }, "name": "Mass air flow",                     "suggestedMetric": "massAirFlow"},
     {"id": "SCION_MAF_V3",                       "path": "Engine",   "fmt": {"bix": 24,  "len": 16, "max": 655.35,                                                     "unit": "gramsPerSecond"    }, "name": "Mass air flow",                     "suggestedMetric": "massAirFlow"},
-    {"id": "SCION_MAP_7E0",                      "path": "Engine",   "fmt": {"bix": 40,  "len": 8,  "max": 255,                                                        "unit": "kilopascal"        }, "name": "Manifold absolute pressure"},
-    {"id": "SCION_IAT",                          "path": "Engine",   "fmt": {"bix": 40,  "len": 8,  "max": 215,      "min": -40,                           "add": -40, "unit": "celsius"           }, "name": "Intake air temperature"},
-    {"id": "SCION_MAP_7E0_V2",                   "path": "Engine",   "fmt": {"bix": 40,  "len": 8,  "max": 255,                                                        "unit": "kilopascal"        }, "name": "Manifold absolute pressure",        "suggestedMetric": "absoluteBoostPressure"},
-    {"id": "SCION_INTAKE_AIR_7E0",               "path": "Engine",   "fmt": {"bix": 48,  "len": 8,  "max": 215,      "min": -40,                           "add": -40, "unit": "celsius"           }, "name": "Intake air temperature"},
-    {"id": "SCION_ATMOSPHERE_PRESSURE_V2",       "path": "Engine",   "fmt": {"bix": 48,  "len": 8,  "max": 255,                                                        "unit": "kilopascal"        }, "name": "Atmospheric pressure"},
-    {"id": "SCION_INTAKE_AIR_7E0_V3",            "path": "Engine",   "fmt": {"bix": 48,  "len": 8,  "max": 215,      "min": -40,                           "add": -40, "unit": "celsius"           }, "name": "Intake air temperature",            "suggestedMetric": "intakeAirTemperature"},
-    {"id": "SCION_ATMOSPHERE_PRESSURE",          "path": "Engine",   "fmt": {"bix": 56,  "len": 8,  "max": 255,                                                        "unit": "kilopascal"        }, "name": "Atmospheric pressure"},
+    {"id": "SCION_MAP_7E0",                      "path": "Engine",   "fmt": {"bix": 40,  "len": 8,  "max": 255,                                                        "unit": "kilopascal"        }, "name": "Manifold absolute pressure",        "suggestedMetric": "absoluteBoostPressure"},
+    {"id": "SCION_IAT",                          "path": "Engine",   "fmt": {"bix": 40,  "len": 8,  "max": 215,      "min": -40,                           "add": -40, "unit": "celsius"           }, "name": "Intake air temperature",            "suggestedMetric": "intakeAirTemperature"},
+    {"id": "SCION_MAP",                          "path": "Engine",   "fmt": {"bix": 40,  "len": 8,  "max": 255,                                                        "unit": "kilopascal"        }, "name": "MAP"},
+    {"id": "SCION_INTAKE_AIR_7E0",               "path": "Engine",   "fmt": {"bix": 48,  "len": 8,  "max": 215,      "min": -40,                           "add": -40, "unit": "celsius"           }, "name": "Intake air temperature",            "suggestedMetric": "intakeAirTemperature"},
+    {"id": "SCION_ATMOSPHERE_PRESSURE_V2",       "path": "Engine",   "fmt": {"bix": 48,  "len": 8,  "max": 255,                                                        "unit": "kilopascal"        }, "name": "Atmospheric pressure",              "suggestedMetric": "barometricPressure"},
+    {"id": "SCION_ATMOSPHERE_PRESSURE",          "path": "Engine",   "fmt": {"bix": 56,  "len": 8,  "max": 255,                                                        "unit": "kilopascal"        }, "name": "Atmospheric pressure",              "suggestedMetric": "barometricPressure"},
     {"id": "SCION_COOLANT_TEMP_7E0_V2",          "path": "Engine",   "fmt": {"bix": 56,  "len": 8,  "max": 215,      "min": -40,                           "add": -40, "unit": "celsius"           }, "name": "Coolant temperature"},
     {"id": "SCION_ECT_7E0",                      "path": "Engine",   "fmt": {"bix": 56,  "len": 8,  "max": 215,      "min": -40,                           "add": -40, "unit": "celsius"           }, "name": "Engine coolant temperature",        "suggestedMetric": "engineCoolantTemperature"},
     {"id": "SCION_COOLANT_TEMP_7E0",             "path": "Engine",   "fmt": {"bix": 64,  "len": 8,  "max": 215,      "min": -40,                           "add": -40, "unit": "celsius"           }, "name": "Coolant temperature"},
@@ -2216,7 +2215,7 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "06"}, "freq": 1,
   "signals": [
-    {"id": "SCION_MIL",                               "path": "DTCs", "fmt": {           "len": 1,  "max": 1,                                                       "unit": "offon"      }, "name": "MIL"},
+    {"id": "SCION_MIL",                               "path": "DTCs", "fmt": {           "len": 1,  "max": 1,                                                       "unit": "offon"      }, "name": "MIL",                                 "suggestedMetric": "checkEngineLightOn"},
     {"id": "SCION_N210_STFT_B1",                      "path": "Fuel", "fmt": {           "len": 8,  "max": 99.22, "min": -100, "mul": 100, "div": 128, "add": -100, "unit": "percent"    }, "name": "Short term fuel trim, bank 1"},
     {"id": "SCION_NUMBER_OF_EMISSION_DTC",            "path": "DTCs", "fmt": {"bix": 1,  "len": 7,  "max": 127,                                                     "unit": "scalar"     }, "name": "Number of emission DTC"},
     {"id": "SCION_COMPLETE_PARTS_MONITOR_AVAIL",      "path": "DTCs", "fmt": {"bix": 13, "len": 1,  "max": 1,                                                       "unit": "noyes"      }, "name": "Complete parts monitor available?"},
@@ -2274,7 +2273,7 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "0F"}, "freq": 1,
   "signals": [
-    {"id": "SCION_IAT_21", "path": "Engine", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Intake air temperature"}
+    {"id": "SCION_IAT_21", "path": "Engine", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Intake air temperature", "suggestedMetric": "intakeAirTemperature"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "10"}, "freq": 1,
   "signals": [
@@ -2540,7 +2539,7 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "85"}, "freq": 0.4,
   "signals": [
-    {"id": "SCION_GEAR",       "path": "Transmission", "fmt": {          "len": 8, "max": 20,  "unit": "scalar" }, "name": "Gear"},
+    {"id": "SCION_GEAR",       "path": "Transmission", "fmt": {          "len": 8, "max": 20,  "unit": "scalar" }, "name": "Gear",                     "suggestedMetric": "gear"},
     {"id": "SCION_GEAR_V2",    "path": "Transmission", "fmt": {          "len": 8, "max": 255, "unit": "scalar" }, "name": "Gear, variant"},
     {"id": "SCION_TQC_LOCKUP", "path": "Transmission", "fmt": {"bix": 8, "len": 1, "max": 1,   "unit": "offon"  }, "name": "Torque converter lock-up", "description": "Engages a clutch inside the torque converter to create a direct connection between the engine and transmission, reducing slippage and improving efficiency."}
   ]},
@@ -2569,7 +2568,7 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "D3"}, "freq": 0.25,
   "signals": [
-    {"id": "SCION_CRUISE_CTRL_SPD", "path": "Movement", "fmt": {"bix": 8,  "len": 8, "max": 255, "unit": "kilometersPerHour" }, "name": "Cruise control speed"},
+    {"id": "SCION_CRUISE_CTRL_SPD", "path": "Movement", "fmt": {"bix": 8,  "len": 8, "max": 255, "unit": "kilometersPerHour" }, "name": "Cruise control speed", "suggestedMetric": "cruiseSetSpeed"},
     {"id": "SCION_CRUISE_CTRL_ON",  "path": "Engine",   "fmt": {"bix": 25, "len": 1, "max": 1,   "unit": "offon"             }, "name": "Cruise control on"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "D9"}, "freq": 5,
@@ -2632,7 +2631,7 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "0202"}, "freq": 3600,
   "signals": [
-    {"id": "SCION_IA_DTC_CNTD", "path": "DTCs", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Number of DTCs"}
+    {"id": "SCION_IA_DTC_CNTD", "path": "DTCs", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Number of DTCs", "suggestedMetric": "storedDTCCount"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "0301"}, "freq": 0.25,
   "signals": [
@@ -2933,7 +2932,7 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "F40B"}, "freq": 1,
   "signals": [
-    {"id": "SCION_IA_MAP_7E0", "path": "Engine", "fmt": { "len": 8, "max": 36, "mul": 10000, "div": 68947, "unit": "psi" }, "name": "Manifold pressure"}
+    {"id": "SCION_IA_MAP_7E0", "path": "Engine", "fmt": { "len": 8, "max": 36, "mul": 10000, "div": 68947, "unit": "psi" }, "name": "Manifold pressure", "suggestedMetric": "absoluteBoostPressure"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "F40C"}, "freq": 0.25,
   "signals": [
@@ -3347,10 +3346,10 @@
   ]},
 { "hdr": "7E2", "rax": "7EA", "dbg": true, "cmd": {"21": "D3"}, "freq": 1,
   "signals": [
-    {"id": "SCION_CRUISE_SPD",      "path": "Control",      "fmt": {           "len": 8, "max": 255,                "unit": "kilometersPerHour" }, "name": "Cruise control set speed"},
+    {"id": "SCION_CRUISE_SPD",      "path": "Control",      "fmt": {           "len": 8, "max": 255,                "unit": "kilometersPerHour" }, "name": "Cruise control set speed",            "suggestedMetric": "cruiseSetSpeed"},
     {"id": "SCION_CRUISE_THROTTLE", "path": "Control",      "fmt": {"bix": 8,  "len": 8, "max": 100, "mul": 0.3922, "unit": "percent"           }, "name": "Cruise control throttle opening"},
     {"id": "SCION_SHIFT_D",         "path": "Transmission", "fmt": {"bix": 16, "len": 1, "max": 1,                  "unit": "offon"             }, "name": "Shift in drive"},
-    {"id": "SCION_CRUISE",          "path": "Control",      "fmt": {"bix": 17, "len": 1, "max": 1,                  "unit": "offon"             }, "name": "Cruise control active"},
+    {"id": "SCION_CRUISE",          "path": "Control",      "fmt": {"bix": 17, "len": 1, "max": 1,                  "unit": "offon"             }, "name": "Cruise control active",               "suggestedMetric": "cruiseActive"},
     {"id": "SCION_CRUISE_IND",      "path": "Control",      "fmt": {"bix": 18, "len": 1, "max": 1,                  "unit": "offon"             }, "name": "Cruise control indicator"},
     {"id": "SCION_CRUISE_READY",    "path": "Control",      "fmt": {"bix": 21, "len": 1, "max": 1,                  "unit": "offon"             }, "name": "Cruise control ready"},
     {"id": "SCION_CRUISE_MAIN",     "path": "Control",      "fmt": {"bix": 23, "len": 1, "max": 1,                  "unit": "offon"             }, "name": "Cruise control main switch"},
